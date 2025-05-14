@@ -63,7 +63,8 @@ def evaluate_model(test_data_path, encoder):
 # --- Main Pipeline ---
 def main():
     # Load and clean training data
-    df = load_and_clean_data('data/accidents.csv')
+    file_path=C:\project\dataset\Ai driven.csv\
+    df = load_and_clean_data(file_path)
 
     # Feature encoding
     df, encoder = encode_features(df)
@@ -72,7 +73,7 @@ def main():
     train_model(df)
 
     # Evaluate on test data
-    evaluate_model('data/test_accidents.csv', encoder)
+    evaluate_model(file_path, encoder)
 
 if __name__ == '__main__':
     main()
